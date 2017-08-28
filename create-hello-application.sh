@@ -8,3 +8,9 @@ echo "Y" | mvn archetype:generate -DarchetypeGroupId=org.opendaylight.controller
 -Dpackage=org.opendaylight.hello \
 -DclassPrefix=Hello \
 -Dcopyright="CC, Inc."
+
+# Then modify following files
+# * api/src/main/yang/hello.yang
+# * impl/src/main/java/org/opendaylight/hello/impl/HelloWorldImpl.java
+# * impl/src/main/resources/org/opendaylight/blueprint/impl-blueprint.xml
+# * impl/src/main/java/org/opendaylight/hello/impl/HelloProvider.java
