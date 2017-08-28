@@ -14,14 +14,8 @@ mvn archetype:generate -DarchetypeGroupId=org.opendaylight.controller -Darchetyp
 -DarchetypeCatalog=remote -DarchetypeVersion=1.2.3-Boron-SR3
 ```
 
-Define value for property 'groupId': : org.opendaylight.example
+# References
 
-Define value for property 'artifactId': : example
-
-Define value for property 'package':  org.opendaylight.example: :
-
-Define value for property 'classPrefix':  ${artifactId.substring(0,1).toUpperCase()}${artifactId.substring(1)}
-
-Define value for property 'copyright': : CC, Inc.
-
-Y: :
+* [ Bo ] http://docs.opendaylight.org/en/stable-boron/developer-guide/developing-apps-on-the-opendaylight-controller.html 
+* [ Ca ] [ Bo ] https://wiki.opendaylight.org/view/OpenDaylight_Controller:MD-SAL:Startup_Project_Archetype
+* [ Be ] http://opensourceforu.com/2016/07/creating-your-own-application-in-opendaylight/
