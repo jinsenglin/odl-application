@@ -24,13 +24,14 @@ mvn clean install
 cd hello/
 mvn clean install
 ./karaf/target/assembly/bin/karaf
+curl -X POST -H "Content-Type: application/json" http://admin:admin@127.0.0.1:8080/restconf/operations/hello:hello-world -d '{"hello:input": { "hello:name":"Your Name"}}'
 ```
 
-[ REST Web UI ] http://localhost:8181/apidoc/explorer/index.html
+[ Swagger UI ] http://localhost:8080/apidoc/explorer/index.html
 
-[ DLUX Web UI ] http://localhost:8181/index.html
+[ DLUX UI ] http://localhost:8181/index.html
 
-# References
+# References for example and hello applications
 
 * [ Bo ] http://docs.opendaylight.org/en/stable-boron/developer-guide/developing-apps-on-the-opendaylight-controller.html 
 * [ Ca ] [ Bo ] https://wiki.opendaylight.org/view/OpenDaylight_Controller:MD-SAL:Startup_Project_Archetype
