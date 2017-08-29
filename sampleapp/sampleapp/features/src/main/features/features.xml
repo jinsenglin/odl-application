@@ -15,7 +15,7 @@ and is available at http://www.eclipse.org/legal/epl-v10.html
   <repository>mvn:org.opendaylight.mdsal.model/features-mdsal-model/{{VERSION}}/xml/features</repository>
   <repository>mvn:org.opendaylight.netconf/features-restconf/{{VERSION}}/xml/features</repository>
   <repository>mvn:org.opendaylight.dluxapps/features-dluxapps/{{VERSION}}/xml/features</repository>
-  <repository>mvn:org.opendaylight.genius/genius-features/$genius.version/xml/features</repository>
+  <repository>mvn:org.opendaylight.genius/genius-features/${genius.version}/xml/features</repository>
   <repository>mvn:org.opendaylight.openflowplugin/features-openflowplugin/${openflowplugin.version}/xml/features</repository>
   <feature name='odl-sampleapp-api' version='${project.version}' description='OpenDaylight :: sampleapp :: api'>
     <feature version='${mdsal.model.version}'>odl-mdsal-models</feature>
