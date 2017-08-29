@@ -47,10 +47,10 @@ cd ..
 cp to-be/sampleapp-3/*.java impl/src/main/java/org/opendaylight/sampleapp/impl/
 cp to-be/sampleapp-3/impl/pom.xml impl/pom.xml
 cp to-be/sampleapp-3/impl-blueprint.xml impl/src/main/resources/org/opendaylight/blueprint/impl-blueprint.xml
-cp to-be/sampleapp-3/features.xml features/src/main/features/features.xml
 cd impl
 mvn clean install
 cd ..
+cp to-be/sampleapp-3/features.xml features/src/main/features/features.xml
 cd features
 mvn clean install
 cd ..
