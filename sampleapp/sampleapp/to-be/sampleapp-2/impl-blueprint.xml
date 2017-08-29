@@ -24,7 +24,6 @@ and is available at http://www.eclipse.org/legal/epl-v10.html
   <bean id="sampleappListener"
     class="org.opendaylight.sampleapp.impl.SampleAppListener">
     <argument ref="dataBroker" />
-    <argument ref="sampleappDSHandler" />
   </bean>
 
 </blueprint>
