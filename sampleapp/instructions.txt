@@ -1,0 +1,48 @@
+1. Create a directory for your workspace
+2. Copy the command from MavenArcheTypeCmd.txt into your directory.( Make sure your have internet connection)
+3. You will pe prompted for the following and please enter the details as below
+groupId: (org.opendaylight.sampleapp)
+artifactId: sampleapp
+version: (0.1.0-SNAPSHOT)
+package: (accept default) (org.opendaylight.sampleapp)
+classPrefix:Sampleapp
+copyright: Opendaylight
+copyrightYear: 2016
+4. A sampleapp directory will be created with the following content
+api  
+artifacts  
+cli  
+deploy-site.xml  
+features  
+impl  
+it  
+karaf  
+pom.xml  
+src
+5. For the first exercise ( sample files will be under /home/odl-developer/Tutorial/sampleapp-1)
+	a. Copy the sampleapp.yang to api/src/main/yang directory.
+	b. Copy pom.xml file to api directory.
+	c. Compile using mvn clean install 	
+	d. Run "karaf clean" from karaf/target/assembly/bin
+	e. You will see the Karaf console
+        f. Start the web browser and type the url - http://localhost:8181/apidoc/explorer/index.html
+        g. Enter admin/admin
+	h. Post the JSON from SampleAppJSON. 
+	i. Use the Get REST APIs and see the posted data
+6. For the second Excercise ( sample files will be under /home/odl-developer/Tutorial/sampleapp-2)
+	a. Copy the SampleAppListener.java to impl/src/main/java/org/opendaylight/sampleapp/impl
+	b. Copy the  impl-blueprint.xml to impl/src/main/resources/org/opendaylight/blueprint/
+	c. Compile using mvn clean install
+	d. Run the "karaf clean"
+	e. On the karaf console, type log:set DEBUG org.opendaylight.sampleapp
+	f. Post the JSON from REST
+	g. Do a log:tail on the karaf console and see that the DataTreeChanged listener callback was invoked.
+	h. The AccessList Data that was posted from JSON will be printed.
+        i. The information is printed in the karaf.log file under the directory - karaf/target/assembly/data/log
+7. For the third excercise,( sample files will be under /home/odl-developer/Tutorial/sampleapp-3)
+	a. Copy the Java files from the impl directory. 
+	b. Copy the pom.xml from the impl directory
+	c. Copy the impl-blueprint.xml
+	d. Copy the features.xml from features/src/main/features to the corresponding directory
+	e. Compile and run
+	f. Follow the instructions in the company ODL_Summit_2016_Sample_App_Tutorial.ppt

@@ -33,6 +33,10 @@ curl -X POST -H "Content-Type: application/json" http://admin:admin@127.0.0.1:80
 
 # References for example and hello applications
 
+* [ Ca ] [ Bo ] https://wiki.opendaylight.org/view/OpenDaylight_Controller:MD-SAL:Startup_Project_Archetype *****
 * [ Bo ] http://docs.opendaylight.org/en/stable-boron/developer-guide/developing-apps-on-the-opendaylight-controller.html 
-* [ Ca ] [ Bo ] https://wiki.opendaylight.org/view/OpenDaylight_Controller:MD-SAL:Startup_Project_Archetype
 * [ Be ] http://opensourceforu.com/2016/07/creating-your-own-application-in-opendaylight/
+
+# References for sampleapp application (Carbon)
+
+* http://zoo.cs.yale.edu/classes/cs434/cs434-2017-spring/assignments/ps1/ODL_Summit_2016_Sample_App_Tutorial.pdf
