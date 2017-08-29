@@ -47,6 +47,9 @@ cp to-be/sampleapp-3/features.xml features/src/main/features/features.xml
 cd impl
 mvn clean install
 cd ..
+cd features
+mvn clean install
+cd ..
 
 mvn clean install
 CMD
