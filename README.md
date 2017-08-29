@@ -31,7 +31,7 @@ curl -X POST -H "Content-Type: application/json" http://admin:admin@127.0.0.1:80
 
 [ DLUX UI ] http://localhost:8181/index.html
 
-# References for example and hello applications
+# References for example and hello applications (Boron-SR3)
 
 * [ Ca ] [ Bo ] https://wiki.opendaylight.org/view/OpenDaylight_Controller:MD-SAL:Startup_Project_Archetype *****
 * [ Bo ] http://docs.opendaylight.org/en/stable-boron/developer-guide/developing-apps-on-the-opendaylight-controller.html 
