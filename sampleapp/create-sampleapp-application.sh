@@ -27,6 +27,7 @@ echo "Y" | mvn archetype:generate \
 # * impl/src/main/resources/org/opendaylight/blueprint/impl-blueprint.xml
 # * impl/pom.xml
 # * features/src/main/features/features.xml
+# * features/pom.xml
 
 <<CMD
 cd sampleapp
@@ -51,6 +52,7 @@ cd impl
 mvn clean install
 cd ..
 cp to-be/sampleapp-3/features.xml features/src/main/features/features.xml
+cp to-be/sampleapp-3/features/pom.xml features/pom.xml
 cd features
 mvn clean install
 cd ..
