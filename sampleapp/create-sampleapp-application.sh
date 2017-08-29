@@ -35,7 +35,7 @@ mvn clean install
 cd ..
 
 cp to-be/sampleapp-2/SampleAppListener.java impl/src/main/java/org/opendaylight/sampleapp/impl/SampleAppListener.java
-cd to-be/sampleapp-2/impl-blueprint.xml impl/src/main/resources/org/opendaylight/blueprint/impl-blueprint.xml
+cp to-be/sampleapp-2/impl-blueprint.xml impl/src/main/resources/org/opendaylight/blueprint/impl-blueprint.xml
 cd impl
 mvn clean install
 cd ..
