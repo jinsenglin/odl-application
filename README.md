@@ -25,6 +25,12 @@ cd hello/
 mvn clean install
 ./karaf/target/assembly/bin/karaf
 curl -X POST -H "Content-Type: application/json" http://admin:admin@127.0.0.1:8080/restconf/operations/hello:hello-world -d '{"hello:input": { "hello:name":"Your Name"}}'
+
+cd sampleapp/sampleapp/
+mvn clean install
+./karaf/target/assembly/bin/karaf
+curl -X POST -H "Content-Type: application/json" http://admin:admin@127.0.0.1:8080/restconf/config/sampleapp:access-list -d @add-permit-rule.json
+curl -X POST -H "Content-Type: application/json" http://admin:admin@127.0.0.1:8080/restconf/config/sampleapp:access-list -d @add-deny-rule.json
 ```
 
 [ Swagger UI ] http://localhost:8080/apidoc/explorer/index.html
