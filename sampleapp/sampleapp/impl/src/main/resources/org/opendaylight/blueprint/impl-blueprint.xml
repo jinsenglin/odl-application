@@ -15,6 +15,10 @@ and is available at http://www.eclipse.org/legal/epl-v10.html
     interface="org.opendaylight.controller.md.sal.binding.api.DataBroker"
     odl:type="default" />
 
+  <reference id="dsHandler"
+             interface="org.opendaylight.sampleapp.impl.SampleAppDataStoreHandler"
+             odl:type="default" />
+
   <bean id="provider"
     class="org.opendaylight.sampleapp.impl.SampleappProvider"
     init-method="init" destroy-method="close">
@@ -24,6 +28,11 @@ and is available at http://www.eclipse.org/legal/epl-v10.html
   <bean id="sampleappListener"
     class="org.opendaylight.sampleapp.impl.SampleAppListener">
     <argument ref="dataBroker" />
+    <argument ref="dsHandler" />
   </bean>
 
+  <bean id="sampleappDSHandler"
+        class="org.opendaylight.sampleapp.impl.SampleAppDataStoreHandler">
+    <argument ref="dataBroker" />
+  </bean>
 </blueprint>
