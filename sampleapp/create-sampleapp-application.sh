@@ -19,9 +19,13 @@ echo "Y" | mvn archetype:generate \
 # * impl/src/main/java/org/opendaylight/sampleapp/impl/SampleAppListener.java
 # * impl/src/main/resources/org/opendaylight/blueprint/impl-blueprint.xml
 # * ===========
-# * impl/**.java
-# * impl/pom.xml
+# * impl/src/main/java/org/opendaylight/sampleapp/impl/FlowData.java
+# * impl/src/main/java/org/opendaylight/sampleapp/impl/SampleAppConstants.java
+# * impl/src/main/java/org/opendaylight/sampleapp/impl/SampleAppDataStoreHandler.java
+# * impl/src/main/java/org/opendaylight/sampleapp/impl/SampleAppListener.java
+# * impl/src/main/java/org/opendaylight/sampleapp/impl/SampleAppUtils.java
 # * impl/src/main/resources/org/opendaylight/blueprint/impl-blueprint.xml
+# * impl/pom.xml
 # * features/src/main/features/features.xml
 
 <<CMD
