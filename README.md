@@ -47,3 +47,11 @@ curl -X GET http://admin:admin@127.0.0.1:8080/restconf/config/sampleapp:access-l
 # References for sampleapp application (Carbon)
 
 * http://zoo.cs.yale.edu/classes/cs434/cs434-2017-spring/assignments/ps1/ODL_Summit_2016_Sample_App_Tutorial.pdf
+
+# Troubleshooting
+
+```
+# Error Message
+
+[ERROR] Failed to execute goal on project sampleapp-impl: Could not resolve dependencies for project org.opendaylight.sampleapp:sampleapp-impl:bundle:0.1.0-SNAPSHOT: The following artifacts could not be resolved: org.opendaylight.openflowplugin.model:model-flow-service:jar:0.4.0-SNAPSHOT, org.opendaylight.openflowplugin.model:model-flow-base:jar:0.4.0-SNAPSHOT, org.opendaylight.genius:mdsalutil-api:jar:0.2.0-SNAPSHOT: Could not find artifact org.opendaylight.openflowplugin.model:model-flow-service:jar:0.4.0-SNAPSHOT in opendaylight-snapshot (https://nexus.opendaylight.org/content/repositories/opendaylight.snapshot/) -> [Help 1]
+```
