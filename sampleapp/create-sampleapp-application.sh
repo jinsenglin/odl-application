@@ -5,7 +5,7 @@ echo "Y" | mvn archetype:generate \
 -DarchetypeArtifactId=opendaylight-startup-archetype \
 -DarchetypeRepository=http://nexus.opendaylight.org/content/repositories/opendaylight.release/ \
 -DarchetypeCatalog=remote \
--DarchetypeVersion=1.3.0-Carbon \
+-DarchetypeVersion=1.2.3-Boron-SR3 \
 -DgroupId=org.opendaylight.sampleapp \
 -DartifactId=sampleapp \
 -Dpackage=org.opendaylight.sampleapp \
