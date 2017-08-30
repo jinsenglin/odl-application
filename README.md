@@ -28,7 +28,7 @@ curl -X POST -H "Content-Type: application/json" http://admin:admin@127.0.0.1:80
 
 cd sampleapp/sampleapp/
 mvn clean install
-./karaf/target/assembly/bin/karaf
+./karaf/target/assembly/bin/karaf clean
 curl -X POST -H "Content-Type: application/json" http://admin:admin@127.0.0.1:8080/restconf/config/sampleapp:access-list -d @add-permit-rule.json
 curl -X POST -H "Content-Type: application/json" http://admin:admin@127.0.0.1:8080/restconf/config/sampleapp:access-list -d @add-deny-rule.json
 curl -X GET http://admin:admin@127.0.0.1:8080/restconf/config/sampleapp:access-list
