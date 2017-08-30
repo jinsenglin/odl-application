@@ -10,6 +10,7 @@ package org.opendaylight.sampleapp.impl;
 
 import org.opendaylight.controller.md.sal.binding.api.*;
 import org.opendaylight.controller.md.sal.common.api.data.LogicalDatastoreType;
+//import org.opendaylight.genius.datastoreutils.AsyncDataTreeChangeListenerBase;
 import org.opendaylight.yangtools.yang.binding.InstanceIdentifier;
 import org.opendaylight.yang.gen.v1.urn.opendaylight.params.xml.ns.yang.sampleapp.rev150105.access.list.AccessListEntry;
 import org.opendaylight.yang.gen.v1.urn.opendaylight.params.xml.ns.yang.sampleapp.rev150105.AccessList;
@@ -24,9 +25,11 @@ public class SampleAppListener implements ClusteredDataTreeChangeListener<Access
     private static final Logger LOG = LoggerFactory.getLogger(SampleAppListener.class);
 
     private final DataBroker broker;
-    
-    public SampleAppListener(final DataBroker db) {
+    private SampleAppDataStoreHandler dsHandler ;
+
+    public SampleAppListener(final DataBroker db, SampleAppDataStoreHandler dsHandler) {
         broker = db;
+        this.dsHandler = dsHandler ;
         registerListener();
     }
 
@@ -65,6 +68,7 @@ public class SampleAppListener implements ClusteredDataTreeChangeListener<Access
                     if (mod.getDataBefore() == null) {
                         LOG.info(" Write after data {} ", mod.getDataAfter());
                         printData(mod) ;
+                        dsHandler.installFlow( mod );
                     }
                     break;
                 default:

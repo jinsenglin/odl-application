@@ -15,12 +15,19 @@ and is available at http://www.eclipse.org/legal/epl-v10.html
   <repository>mvn:org.opendaylight.mdsal.model/features-mdsal-model/{{VERSION}}/xml/features</repository>
   <repository>mvn:org.opendaylight.netconf/features-restconf/{{VERSION}}/xml/features</repository>
   <repository>mvn:org.opendaylight.dlux/features-dlux/{{VERSION}}/xml/features</repository>
+  <repository>mvn:org.opendaylight.genius/genius-features/${genius.version}/xml/features</repository>
+  <repository>mvn:org.opendaylight.openflowplugin/features-openflowplugin/${openflowplugin.version}/xml/features</repository>
   <feature name='odl-sampleapp-api' version='${project.version}' description='OpenDaylight :: sampleapp :: api'>
     <feature version='${mdsal.model.version}'>odl-mdsal-models</feature>
+    <feature version='${openflowplugin.version}'>odl-openflowplugin-nsf-model</feature>
+    <feature version='${genius.version}'>odl-genius-api</feature>
     <bundle>mvn:org.opendaylight.sampleapp/sampleapp-api/{{VERSION}}</bundle>
   </feature>
   <feature name='odl-sampleapp' version='${project.version}' description='OpenDaylight :: sampleapp'>
     <feature version='${mdsal.version}'>odl-mdsal-broker</feature>
+    <feature version="${openflowplugin.version}">odl-openflowplugin-southbound</feature>
+    <feature version='${openflowplugin.version}'>odl-openflowplugin-flow-services</feature>
+    <feature version='${genius.version}'>odl-genius</feature>
     <feature version='${project.version}'>odl-sampleapp-api</feature>
     <bundle>mvn:org.opendaylight.sampleapp/sampleapp-impl/{{VERSION}}</bundle>
   </feature>
@@ -32,6 +39,7 @@ and is available at http://www.eclipse.org/legal/epl-v10.html
     <feature version="${project.version}">odl-sampleapp-rest</feature>
     <feature version="${restconf.version}">odl-mdsal-apidocs</feature>
     <feature version="${dlux.version}">odl-dlux-yangui</feature>
+    <feature version="${mdsal.version}">odl-mdsal-xsql</feature>
   </feature>
   <feature name='odl-sampleapp-cli' version='${project.version}' description='OpenDaylight :: sampleapp :: CLI'>
     <feature version="${project.version}">odl-sampleapp</feature>

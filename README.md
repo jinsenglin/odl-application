@@ -59,6 +59,8 @@ curl -X GET http://admin:admin@127.0.0.1:8080/restconf/config/sampleapp:access-l
 # -> https://github.com/opendaylight/openflowplugin/blob/master/model/model-flow-service/pom.xml
 # -> Switch to branch stable/Boron # Boron Boron Boron instead of Carbon
 # -> Get <version>0.3.5-SNAPSHOT</version>
+#
+# Check https://nexus.opendaylight.org/content/repositories/public/
 ```
 
 # Bug
