@@ -15,7 +15,7 @@ and is available at http://www.eclipse.org/legal/epl-v10.html
   <parent>
     <groupId>org.opendaylight.controller</groupId>
     <artifactId>config-parent</artifactId>
-    <version>0.6.0-Carbon</version>
+    <version>0.5.3-Boron-SR3</version>
     <relativePath/>
   </parent>
 
@@ -38,17 +38,17 @@ and is available at http://www.eclipse.org/legal/epl-v10.html
    <dependency>
       <groupId>org.opendaylight.openflowplugin.model</groupId>
       <artifactId>model-flow-service</artifactId>
-      <version>0.3.5-SNAPSHOT</version>
+      <version>0.3.3-Boron-SR3</version>
     </dependency>
     <dependency>
       <groupId>org.opendaylight.openflowplugin.model</groupId>
       <artifactId>model-flow-base</artifactId>
-      <version>0.3.5-SNAPSHOT</version>
+      <version>0.3.3-Boron-SR3</version>
     </dependency>
     <dependency>
       <groupId>org.opendaylight.genius</groupId>
       <artifactId>mdsalutil-api</artifactId>
-      <version>0.1.5-SNAPSHOT</version>
+      <version>0.1.3-Boron-SR3</version>
     </dependency>
 
     <!-- Testing Dependencies -->
