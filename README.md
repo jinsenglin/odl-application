@@ -32,6 +32,11 @@ mvn clean install
 curl -X POST -H "Content-Type: application/json" http://admin:admin@127.0.0.1:8080/restconf/config/sampleapp:access-list -d @to-be/sampleapp-1/add-permit-rule.json
 curl -X POST -H "Content-Type: application/json" http://admin:admin@127.0.0.1:8080/restconf/config/sampleapp:access-list -d @to-be/sampleapp-1/add-deny-rule.json
 curl -X GET http://admin:admin@127.0.0.1:8080/restconf/config/sampleapp:access-list
+mn --topo tree,depth=1,fanout=2 --mac --controller=remote,ip=127.0.0.1,port=6633 --switch ovs,protocols=OpenFlow13
+ovs-ofctl -O openflow13 dump-flows s1
+
+# cookie=0x1230014, duration=49.069s, table=0, n_packets=0, n_bytes=0, priority=5,ip,nw_dst=10.0.0.1 actions=output:1
+# cookie=0x112000a, duration=49.069s, table=0, n_packets=0, n_bytes=0, priority=5,ip,nw_dst=10.0.0.2 actions=output:2
 ```
 
 [ Swagger UI ] http://localhost:8080/apidoc/explorer/index.html
