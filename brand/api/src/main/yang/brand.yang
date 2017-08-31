@@ -1,0 +1,9 @@
+module brand {
+    yang-version 1;
+    namespace "urn:opendaylight:params:xml:ns:yang:brand";
+    prefix "brand";
+
+    revision "2015-01-05" {
+        description "Initial revision of brand model";
+    }
+}
